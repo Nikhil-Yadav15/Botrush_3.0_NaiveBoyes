@@ -190,12 +190,6 @@ export default function FileUpload() {
                 className="upload-image w-full flex justify-center"
               />
             </div>
-
-              <img
-                src={imageURL}
-                alt="Shortest Path Image"
-                className="upload-image"
-              />
             </div>
           
         )}
