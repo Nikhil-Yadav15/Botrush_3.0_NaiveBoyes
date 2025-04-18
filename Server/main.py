@@ -26,6 +26,7 @@ class SafeStrider:
     def __init__(self):
         self.modelA = load_model("multi.keras")
         self.modelB = load_model("binary.keras")
+        print("Model loaded")
         self.value_matrix = []
         self.classes_predicted = {"Safe": [], "Unsafe": []}
 
