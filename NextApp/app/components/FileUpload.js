@@ -155,10 +155,10 @@ export default function FileUpload() {
             {successMessage && <p>{successMessage}</p>}   {/* Modified by Tirth to show the message for the 5sec */}
             <div className="upload-result">
               <div className="w-full text-left mt-2">
-                <h3 className="text-gray-700 text-center font-semibold mb-1">Images Predicted:</h3>
+                <h3 className="text-gray-700 text-center font-semibold mb-4">Images Predicted:</h3>
                 <div className="flex flex-wrap gap-2 justify-center items-center">
 
-                  {Object.entries(labels).map(([superclass, items]) => (
+                  {/* {Object.entries(labels).map(([superclass, items]) => (
                     items.length > 0 && (
                       <div key={superclass} className="w-full text-center">
                         <h3 className="text-xl text-blue-700 font-semibold mb-3">
@@ -179,7 +179,26 @@ export default function FileUpload() {
                         </div>
                       </div>
                     )
-                  ))}
+                  ))} */}
+                  
+                {Object.entries(labels).map(([superclass, items]) => (
+                  items.length > 0 && (
+                    <div key={superclass} className="w-full md:w-[40%] flex justify-evenly text-center">
+                      <h3 className="text:[0.5vw] md:text-xl text-blue-700 font-semibold inline mb-3">
+                        {superclass}
+                      </h3>
+                      <span
+                        className={`px-4 py-2 rounded-full text-sm font-medium inline ${
+                          superclass === 'Safe'
+                            ? 'bg-green-100 text-green-800'
+                            : 'bg-red-100 text-red-800'
+                        }`}
+                      >
+                        {items.length} item{items.length > 1 ? 's' : ''}
+                      </span>
+                    </div>
+                  )
+                ))}
 
                 </div>
               </div>
