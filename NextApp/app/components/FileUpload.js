@@ -151,7 +151,7 @@ export default function FileUpload() {
         )}
 
         {success && (
-          <div className="text-green-500 text-2xl p-2 bg-green-50 rounded border-b-emerald-600">
+          <div className="text-green-500 text-2xl p-2 rounded border-b-emerald-600">
             {successMessage && <p>{successMessage}</p>}   {/* Modified by Tirth to show the message for the 5sec */}
             <div className="upload-result">
               <div className="w-full text-left mt-2">
