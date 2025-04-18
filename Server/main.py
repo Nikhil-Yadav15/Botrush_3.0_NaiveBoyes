@@ -88,9 +88,10 @@ class SafeStrider:
 
         pred_super = 0 if final_safe > final_unsafe else 1
 
-        self.classes_predicted.append(predicted_label)
         if pred_super == 0:
+            self.classes_predicted["Safe"].append(predicted_label)
             return 1
+        self.classes_predicted["Unsafe"].append(predicted_label)
         return 0
     
     def classify_cell(self, cell_img):
