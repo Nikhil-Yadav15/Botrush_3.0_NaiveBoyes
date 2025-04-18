@@ -80,7 +80,7 @@ export default function FileUpload() {
         setPreview(null);
       }
     } catch (err) {
-      setError(err.message || 'Failed to upload file');
+      setError("Access Denied!" || 'Failed to upload file');
     } finally {
       setLoading(false);
     }
