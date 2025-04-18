@@ -155,15 +155,41 @@ export default function FileUpload() {
             {successMessage && <p>{successMessage}</p>}   {/* Modified by Tirth to show the message for the 5sec */}
             <div className="upload-result">
               <div className="w-full text-left mt-2">
-                <h3 className="text-gray-700 font-semibold mb-1">Images Predicted:</h3>
-                <div className="flex flex-wrap gap-2">
-                  {labels.map((element, index) => (
-                    <div key={index} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                      {element}
-                    </div>
+                <h3 className="text-gray-700 text-center font-semibold mb-1">Images Predicted:</h3>
+                <div className="flex flex-wrap gap-2 justify-center items-center">
+
+                  {Object.entries(labels).map(([superclass, items]) => (
+                    items.length > 0 && (
+                      <div key={superclass} className="w-full text-center">
+                        <h3 className="text-xl text-blue-700 font-semibold mb-3">
+                          {superclass}
+                        </h3>
+                        <div className="flex flex-wrap gap-2 justify-center items-center">
+                          {items.map((element, index) => (
+                            <div
+                              key={index}
+                              className={`px-3 py-1 rounded-full text-sm font-medium ${superclass === 'Safe'
+                                  ? 'bg-green-100 text-green-800'
+                                  : 'bg-red-100 text-red-800'
+                                }`}
+                            >
+                              {element}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )
                   ))}
+
                 </div>
               </div>
+
+              <img
+                src={imageURL}
+                alt="Shortest Path Image"
+                className="upload-image w-full flex justify-center"
+              />
+            </div>
 
               <img
                 src={imageURL}
@@ -171,7 +197,6 @@ export default function FileUpload() {
                 className="upload-image"
               />
             </div>
-          </div>
           
         )}
         
