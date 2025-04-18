@@ -34,6 +34,7 @@ body {
   padding: 1rem;
   background-color: #f0fdf4; /* light green */
   border-radius: 0.75rem; /* rounded corners */
+  border: 4px solid #37da8e;
   box-shadow: 0 2px 8px rgba(0, 128, 0, 0.1);
 }
 
