@@ -15,7 +15,7 @@ from path_drawer import PathDrawer
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://safe-strider.vercel.app"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -156,7 +156,6 @@ class SafeStrider:
                         row.append(1)
                     else:
                         row.append(-1)
-                    row.append(1)
             self.value_matrix.append(row)
 
         self.path_algorithm = PathAlgorithm(self.value_matrix)
