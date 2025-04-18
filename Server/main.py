@@ -159,8 +159,15 @@ class SafeStrider:
                         row.append(-1)
             self.value_matrix.append(row)
 
-        self.path_algorithm = PathAlgorithm(self.value_matrix)
-        directions = self.path_algorithm.main()
+        # self.path_algorithm = PathAlgorithm(self.value_matrix)
+        # directions = self.path_algorithm.main()
+
+        try:
+            self.path_algorithm = PathAlgorithm(self.value_matrix)
+            directions = self.path_algorithm.main()
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"Path generation failed: {str(e)}")
+
         
         start_cell = (len(horizontal_lines) - 2, 0)
         annotated_img = self.drawer.draw_path(directions, start_cell, vertical_lines, horizontal_lines, annotated_img)
