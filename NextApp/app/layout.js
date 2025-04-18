@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Naive Boyes",
+  title: "SafeStride",
   description: "Optimal path finding ML model",
 };
 
