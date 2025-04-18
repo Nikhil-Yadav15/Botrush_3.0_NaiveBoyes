@@ -15,7 +15,7 @@ from path_drawer import PathDrawer
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://safe-strider.vercel.app/verify-image"],
+    allow_origins=["https://safe-strider.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
