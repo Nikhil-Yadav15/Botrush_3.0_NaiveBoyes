@@ -3,9 +3,9 @@
 import "@/app/globals.css";
 const Footer = () => {
   return (
-    <footer className="w-full py-4 bg-gray-100 mt-auto">
-      <div className="container mx-auto text-center">
-        <p className="text-gray-600">Nikhil</p>
+    <footer className="py-6 bg-gradient-to-b from-gray-900/50 to-transparent shadow-inner ">
+      <div className="container mx-auto text-center text-sm text-white/80">
+      &copy; 2025 Hacktivate | SafeStride
       </div>
     </footer>
   );
