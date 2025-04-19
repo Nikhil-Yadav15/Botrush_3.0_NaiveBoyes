@@ -51,8 +51,8 @@
 
 ## 🌍 Live Demo
 
-- Frontend: [Vercel App URL]()
-- Backend Docs: [Render API Docs]()
+- Frontend: [Vercel App URL](https://safe-strider.vercel.app/)
+- Backend Docs: Render API Docs
 
 ---
 
