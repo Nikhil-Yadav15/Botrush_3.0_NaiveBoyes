@@ -100,12 +100,12 @@ class PathAlgorithm:
                 path_matrix[i][j] = self.bfs_path(points[i], points[j])         # Store actual path as string
 
         # Check if any target is unreachable from any other (distance = -1)
-        for i in range(n):
-            for j in range(n):
-                if i != j and dist_matrix[i][j] == -1:
-                    print("Minimum steps: -1")  # No solution possible
-                    print("Path: ")             # Empty path
-                    exit()
+        # for i in range(n):
+        #     for j in range(n):
+        #         if i != j and dist_matrix[i][j] == -1:
+        #             print("Minimum steps: -1")  # No solution possible
+        #             print("Path: ")             # Empty path
+        #             exit()
 
         # ------------------ TSP PERMUTATION LOGIC ------------------
 
