@@ -28,19 +28,14 @@
 
 | Area          | Technologies                          |
 |---------------|---------------------------------------|
-| **🌐 Frontend**  | Next.js 13, React, Tailwind CSS, Axios |
+| **🌐 Frontend**  | Next.js 13, React, Tailwind CSS |
 | **🔙 Backend**   | FastAPI, Uvicorn, Python 3.10+        |
 | **🤖 ML**        | TensorFlow/Keras, OpenCV, NumPy        |
 | **☁️ Deployment**| Vercel (Frontend), Render (Backend)    |
 
 ## 🌍 Live Demo
 
-- Frontend: [Vercel App URL]()
-- Backend Docs: [Render API Docs]()
+- Try Here: [https://safe-strider.vercel.app/]()
 
-## 🛠️ Installation
 
-### Frontend (Next.js)
-```bash
-cd nikhil-yadav15-botrush_3.0_naiveboyes/NextApp
-npm install
+
