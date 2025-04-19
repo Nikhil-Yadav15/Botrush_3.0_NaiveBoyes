@@ -51,8 +51,7 @@ export default function FileUpload() {
 
     try {
       const response = await axios.post(
-        // 'https://safestrider.onrender.com/predict-image',
-        'https://safestrider-production.up.railway.app/predict-image',
+        'https://safestrider.onrender.com/predict-image',
         formData,
         {
           responseType: 'blob',
