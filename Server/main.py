@@ -102,7 +102,7 @@ class SafeStrider:
         if g > 150 and r < 100 :
             # print("green: ", mean_color, "std_dev: ", std_dev)
             return "green"
-        elif std_dev < 50:
+        elif std_dev < 60:
             return "gray"
         else:
             return "colorful"
