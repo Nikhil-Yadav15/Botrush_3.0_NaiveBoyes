@@ -1,6 +1,7 @@
 from itertools import permutations  # For generating all permutations of targets (for TSP)
 from collections import deque       # For BFS queue implementation
-import sys    
+import time    
+import sys
 class PathAlgorithm:
     def __init__(self, matrix):
         self.rows = len(matrix)
@@ -100,12 +101,10 @@ class PathAlgorithm:
                 path_matrix[i][j] = self.bfs_path(points[i], points[j])         # Store actual path as string
 
         # Check if any target is unreachable from any other (distance = -1)
-        # for i in range(n):
-        #     for j in range(n):
-        #         if i != j and dist_matrix[i][j] == -1:
-        #             print("Minimum steps: -1")  # No solution possible
-        #             print("Path: ")             # Empty path
-        #             exit()
+        for i in range(n):
+            for j in range(n):
+                if i != j and dist_matrix[i][j] == -1:
+                    return ''
 
         # ------------------ TSP PERMUTATION LOGIC ------------------
 
@@ -115,10 +114,16 @@ class PathAlgorithm:
         best_path = ""                    # Store best (shortest) path as string
 
         # Evaluate each permutation as a potential path
+        start_time = time.time()
         for perm in permutations(perm_indices):
+            if time.time() - start_time > 180:
+                break
             total = dist_matrix[0][perm[0]]               # Distance from start to first target
             path = path_matrix[0][perm[0]]                # Path from start to first target
-            for i in range(len(perm) - 1):                # Go through each pair in the permutation
+            for i in range(len(perm) - 1):
+                if time.time() - start_time > 180:
+                    break
+                # Go through each pair in the permutation
                 total += dist_matrix[perm[i]][perm[i + 1]]
                 path += path_matrix[perm[i]][perm[i + 1]]
             if total < min_dist:                          # If this permutation is better, update
@@ -126,13 +131,4 @@ class PathAlgorithm:
                 best_path = path
 
         # ---------------------- FINAL OUTPUT -----------------------
-
-        # Print the result
-        # print("Minimum steps:", min_dist)
-        # print("Path:", best_path)
         return best_path
-    
-# val = PathAlgorithm([[1, 0, 0, 0, 0], [0, 0, 0, 0, 1], [-1, -1, -1, -1, 1], [0, 0, 0, 0, 0], [1, 1, 1, 1, 1]])
-
-# t = val.main()
-# print("Return: ", t)
