@@ -11,14 +11,15 @@
 </h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Next.js-13-blue?logo=next.js" alt="Next.js Badge"/>
-  <img src="https://img.shields.io/badge/FastAPI-0.95+-green?logo=fastapi" alt="FastAPI Badge"/>
-  <img src="https://img.shields.io/badge/TensorFlow-2.x-orange?logo=tensorflow" alt="TensorFlow Badge"/>
-  <img src="https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel" alt="Vercel Badge"/>
-  <img src="https://img.shields.io/badge/Backend%20on-Render-46d3ff?logo=render" alt="Render Badge"/>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js Badge"/>
+  <img src="https://img.shields.io/badge/FastAPI-%231572B6.svg?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI Badge"/>
+  <img src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white" alt="TensorFlow Badge"/>
+  <img src="https://img.shields.io/badge/Vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel Badge"/>
+  <img src="https://img.shields.io/badge/Backend%20on-Render-46d3ff?style=for-the-badge&logo=render" alt="Render Badge"/>
 </p>
 
 ---
+
 
 ✨ A full-stack application for machine learning classification tasks with file upload capabilities, result visualization, and grid-based intelligent pathfinding — deployed on Vercel (frontend) and Render (backend).
 
