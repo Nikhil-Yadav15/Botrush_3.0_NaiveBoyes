@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="container mx-auto w-full flex items-center justify-center">
         <img src="./icon.svg" className="nabarLogo"/>
         <Link href="/" className="flex items-center p-2">
-        <span style={{ fontFamily: 'var(--font-chakra)', fontSize: '2rem' }} className="w-full text-2xl text-center text font-bold text-white text-shadow-blue-600 ">Naive Boyes</span>
+        <span style={{ fontFamily: 'var(--font-chakra)', fontSize: '2rem' }} className="w-full text-2xl text-center text font-bold text-white text-shadow-blue-600 ">SafeStride</span>
         </Link>
       </div>
     </nav>
