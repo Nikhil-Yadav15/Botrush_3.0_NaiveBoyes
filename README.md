@@ -56,7 +56,7 @@
 
 | Area            | Technologies                          |
 |------------------|----------------------------------------|
-| **🌐 Frontend**    | Next.js 13, React, Tailwind CSS, Axios |
+| **🌐 Frontend**    | Next.js 15, React, Tailwind CSS, Axios |
 | **🔙 Backend**     | FastAPI, Uvicorn, Python 3.10+        |
 | **🤖 ML**          | TensorFlow/Keras, OpenCV, NumPy        |
 | **🧭 Pathfinding** | Custom TSP-BFS Hybrid Algorithm        |
