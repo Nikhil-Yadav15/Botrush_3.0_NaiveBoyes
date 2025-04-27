@@ -32,7 +32,8 @@
   - 📊 Progress tracking with Axios
 
 - **🧠 Advanced ML Processing**
-  - 🤖 Pre-trained Keras models (`binary.keras`, `multi.keras`)
+  - 🤖 Trained ML models (`binary.keras`, `multi.keras`) for Ensembled Prediction
+  - Achieved an impressive 98.2% accuracy
   - 👁️ Computer vision support via OpenCV (`cv2`)
   - 🔢 NumPy-based data processing
 
