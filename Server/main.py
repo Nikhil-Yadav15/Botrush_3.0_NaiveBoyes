@@ -83,10 +83,8 @@ class SafeStrider:
         safeB = 1 - super_prob
         unsafeB = super_prob
 
-        # final_safe = (safeA + safeB) / 2
-        # final_unsafe = (unsafeA + unsafeB) / 2
-        final_safe = safeB
-        final_unsafe = unsafeB
+        final_safe = (safeA + safeB) / 2
+        final_unsafe = (unsafeA + unsafeB) / 2
 
         pred_super = 0 if final_safe > final_unsafe else 1
 
