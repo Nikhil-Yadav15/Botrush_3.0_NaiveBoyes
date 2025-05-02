@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Chakra_Petch } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { Analytics } from "@vercel/analytics/react"
 
 const chakra = Chakra_Petch({
   subsets: ['latin'],
@@ -45,6 +46,7 @@ export default function RootLayout({ children }) {
 
           {children}
           <Footer />
+          <Analytics />
         </main>
       </body>
     </html>
